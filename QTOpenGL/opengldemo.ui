@@ -1,0 +1,1569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OpenGLDemoClass</class>
+ <widget class="QMainWindow" name="OpenGLDemoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>601</width>
+    <height>491</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>OpenGLDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="MyGLWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>10</y>
+      <width>583</width>
+      <height>473</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>390</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset to Character</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>10</y>
+      <width>161</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Translate X</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider">
+       <property name="minimum">
+        <number>-400</number>
+       </property>
+       <property name="maximum">
+        <number>400</number>
+       </property>
+       <property name="singleStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>-1</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Translate Y</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider_2">
+       <property name="minimum">
+        <number>-400</number>
+       </property>
+       <property name="maximum">
+        <number>400</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Rotation</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider_3">
+       <property name="minimum">
+        <number>-180</number>
+       </property>
+       <property name="maximum">
+        <number>180</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Scale X</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider_4">
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>50</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Scale Y</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider_5">
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>50</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Red</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider_6">
+       <property name="maximum">
+        <number>1275</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Green</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider_7">
+       <property name="maximum">
+        <number>1275</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Blue</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider_8">
+       <property name="maximum">
+        <number>1275</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="qTree" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>211</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>190</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Node</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>230</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Node</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>180</y>
+      <width>135</width>
+      <height>86</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="addNodeText" name="lineEdit"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Number of Sides</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="addNodeText" name="lineEdit_2"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="qtFrameBook" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>490</y>
+      <width>791</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>490</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> Create First Frame</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>430</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Remove Frame</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>510</y>
+      <width>171</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Frame Behind Existing Frame</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>530</y>
+      <width>171</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Frame Before Existing Frame</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>460</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Batch Add Behind</string>
+    </property>
+   </widget>
+   <widget class="batchAddText" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>460</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>270</y>
+      <width>201</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>390</y>
+      <width>41</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Play</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_10">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>390</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pause</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_11">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>390</y>
+      <width>41</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stop</string>
+    </property>
+   </widget>
+   <widget class="sliderWrapper" name="horizontalSlider_9">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>460</y>
+      <width>160</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>35</x>
+      <y>440</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Frame Type:</string>
+    </property>
+   </widget>
+   <widget class="batchAddText" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>570</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_13">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>570</y>
+      <width>141</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string># of Frames in Animation</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_12">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>420</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fade In</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_14">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>420</y>
+      <width>61</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fade Out</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_15">
+    <property name="geometry">
+     <rect>
+      <x>104</x>
+      <y>360</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Sec Elapsed</string>
+    </property>
+   </widget>
+   <widget class="batchAddText" name="lineEdit_5">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>360</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_16">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>390</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nonlinear Play</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MyGLWidget</class>
+   <extends>QWidget</extends>
+   <header>MyGLWidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>makeRoot(sceneNode*)</signal>
+    <signal>makeChild(sceneNode*,sceneNode*)</signal>
+    <signal>makeFrame(QImage,sceneNode*)</signal>
+    <signal>editFrame(QImage,sceneNode*)</signal>
+    <signal>makeFrameBehind(QImage,sceneNode*)</signal>
+    <signal>makeFrameBefore(QImage,sceneNode*)</signal>
+    <signal>sendInterpolatedQImage(QImage,sceneNode*,int)</signal>
+    <signal>sendAddedNodeToFrames(int,QString,QString)</signal>
+    <signal>sendEditSpecificQImage(QImage,int,sceneNode*)</signal>
+    <signal>printWidget(QString)</signal>
+    <signal>addOneKeyFrame(QImage,sceneNode*)</signal>
+    <signal>setFrameText(QString)</signal>
+    <slot>translateX(int)</slot>
+    <slot>translateY(int)</slot>
+    <slot>rotation(int)</slot>
+    <slot>scaleX(int)</slot>
+    <slot>scaleY(int)</slot>
+    <slot>red(int)</slot>
+    <slot>green(int)</slot>
+    <slot>blue(int)</slot>
+    <slot>resetCharacter()</slot>
+    <slot>setCurrentNode(QTreeWidgetItem*,int)</slot>
+    <slot>deleteNode()</slot>
+    <slot>addNode(QString,QString)</slot>
+    <slot>addNodeName(QString)</slot>
+    <slot>addNodeSides(QString)</slot>
+    <slot>addQTFrame()</slot>
+    <slot>editQTFrame()</slot>
+    <slot>editRepaint(sceneNode*)</slot>
+    <slot>makeQTFrameBehind()</slot>
+    <slot>makeQTFrameBefore()</slot>
+    <slot>makeInterpolatedQImage(sceneNode*,sceneNode*,int)</slot>
+    <slot>makeEditSpecificQImage(int,sceneNode*)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>qTree</class>
+   <extends>QTreeWidget</extends>
+   <header>qtree.h</header>
+   <slots>
+    <slot>putRoot(sceneNode*)</slot>
+    <slot>putChild(sceneNode*,sceneNode*)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>addNodeText</class>
+   <extends>QLineEdit</extends>
+   <header>addnodetext.h</header>
+   <slots>
+    <signal>signalN(QString)</signal>
+    <signal>signalS(QString)</signal>
+    <slot>gotClickedSides()</slot>
+    <slot>gotClickedName()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>qtFrameBook</class>
+   <extends>QTableWidget</extends>
+   <header>qtframebook.h</header>
+   <slots>
+    <signal>sendCurrentFrame(sceneNode*)</signal>
+    <signal>sendInterpolatedCopy(sceneNode*,sceneNode*,int)</signal>
+    <signal>sendEditSpecificFrame(int,sceneNode*)</signal>
+    <signal>printFrame(QString)</signal>
+    <signal>setFrameTypeText(QString)</signal>
+    <signal>changeSliderRange(int)</signal>
+    <signal>sendSetValue(int)</signal>
+    <slot>getFrame(QImage,sceneNode*)</slot>
+    <slot>getCurrentFrame(int,int)</slot>
+    <slot>removeFrame()</slot>
+    <slot>editFrame()</slot>
+    <slot>getEditFrame(QImage,sceneNode*)</slot>
+    <slot>editRepaint(sceneNode*)</slot>
+    <slot>sendEditFrame(int,int)</slot>
+    <slot>getFrameBehind(QImage,sceneNode*)</slot>
+    <slot>getFrameBefore(QImage,sceneNode*)</slot>
+    <slot>receiveInterpolatedQImage(QImage,sceneNode*,int)</slot>
+    <slot>receiveAddedNode(int,QString,QString)</slot>
+    <slot>receivedSpecificEditQImage(QImage,int,sceneNode*)</slot>
+    <slot>receiveNumberBatchAdd(QString)</slot>
+    <slot>play()</slot>
+    <slot>getFrameType(int,int)</slot>
+    <slot>setAnimatedFramesNumber(int)</slot>
+    <slot>receiveAnimationSliderPosition(int)</slot>
+    <slot>doAddOneKeyFrame(QImage,sceneNode*)</slot>
+    <slot>stop()</slot>
+    <slot>pause()</slot>
+    <slot>getUserSpeed(int)</slot>
+    <slot>nonlinearPlay()</slot>
+    <slot>fadeIn()</slot>
+    <slot>fadeOut()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>batchAddText</class>
+   <extends>QLineEdit</extends>
+   <header>batchaddtext.h</header>
+   <slots>
+    <signal>batchAddNumbers(QString)</signal>
+    <signal>animatedNumberFrames(int)</signal>
+    <signal>userSpeed(int)</signal>
+    <slot>gotClickedNumbers()</slot>
+    <slot>gotAnimatedNumberFrames()</slot>
+    <slot>gotSetSpeed()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>sliderWrapper</class>
+   <extends>QSlider</extends>
+   <header>sliderwrapper.h</header>
+   <slots>
+    <signal>printSlider(QString)</signal>
+    <slot>setTheRange(int)</slot>
+    <slot>getPosition(int)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="opengldemo.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>widget</receiver>
+   <slot>translateX(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>969</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>464</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_2</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>widget</receiver>
+   <slot>translateY(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>969</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>505</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_3</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>widget</receiver>
+   <slot>rotation(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>969</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>540</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_4</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>widget</receiver>
+   <slot>scaleX(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>969</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>496</x>
+     <y>195</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_5</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>widget</receiver>
+   <slot>scaleY(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>969</x>
+     <y>245</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>500</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_6</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>widget</receiver>
+   <slot>red(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>969</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>484</x>
+     <y>295</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_7</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>widget</receiver>
+   <slot>green(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>969</x>
+     <y>341</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>474</x>
+     <y>323</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_8</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>widget</receiver>
+   <slot>blue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>969</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>438</x>
+     <y>374</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>resetCharacter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>845</x>
+     <y>394</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>503</x>
+     <y>401</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>makeRoot(sceneNode*)</signal>
+   <receiver>treeWidget</receiver>
+   <slot>putRoot(sceneNode*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>167</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>154</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>makeChild(sceneNode*,sceneNode*)</signal>
+   <receiver>treeWidget</receiver>
+   <slot>putChild(sceneNode*,sceneNode*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>155</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeWidget</sender>
+   <signal>itemClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>widget</receiver>
+   <slot>setCurrentNode(QTreeWidgetItem*,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>181</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>268</x>
+     <y>197</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>deleteNode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>183</x>
+     <y>244</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>gotClickedName()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>133</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_2</receiver>
+   <slot>gotClickedSides()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>133</x>
+     <y>264</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>signalN(QString)</signal>
+   <receiver>widget</receiver>
+   <slot>addNodeName(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>229</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_2</sender>
+   <signal>signalS(QString)</signal>
+   <receiver>widget</receiver>
+   <slot>addNodeSides(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>264</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>371</x>
+     <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>addQTFrame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>855</x>
+     <y>512</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>794</x>
+     <y>456</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>makeFrame(QImage,sceneNode*)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>getFrame(QImage,sceneNode*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>668</x>
+     <y>446</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>666</x>
+     <y>516</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>getCurrentFrame(int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>331</x>
+     <y>546</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>217</x>
+     <y>515</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>tableWidget</receiver>
+   <slot>removeFrame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>861</x>
+     <y>431</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>698</x>
+     <y>576</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>editFrame(QImage,sceneNode*)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>getEditFrame(QImage,sceneNode*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>574</x>
+     <y>411</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>591</x>
+     <y>524</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>sendCurrentFrame(sceneNode*)</signal>
+   <receiver>widget</receiver>
+   <slot>editRepaint(sceneNode*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>376</x>
+     <y>518</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>376</x>
+     <y>432</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>makeQTFrameBehind()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>843</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>797</x>
+     <y>473</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>makeFrameBehind(QImage,sceneNode*)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>getFrameBehind(QImage,sceneNode*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>643</x>
+     <y>462</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>641</x>
+     <y>499</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>makeQTFrameBefore()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>864</x>
+     <y>542</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>795</x>
+     <y>439</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>makeFrameBefore(QImage,sceneNode*)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>getFrameBefore(QImage,sceneNode*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>615</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>620</x>
+     <y>509</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>sendInterpolatedCopy(sceneNode*,sceneNode*,int)</signal>
+   <receiver>widget</receiver>
+   <slot>makeInterpolatedQImage(sceneNode*,sceneNode*,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>404</x>
+     <y>508</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>470</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>sendInterpolatedQImage(QImage,sceneNode*,int)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>receiveInterpolatedQImage(QImage,sceneNode*,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>470</x>
+     <y>446</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>476</x>
+     <y>529</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>sendAddedNodeToFrames(int,QString,QString)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>receiveAddedNode(int,QString,QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>420</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>530</x>
+     <y>502</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>sendEditSpecificFrame(int,sceneNode*)</signal>
+   <receiver>widget</receiver>
+   <slot>makeEditSpecificQImage(int,sceneNode*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>421</x>
+     <y>493</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>425</x>
+     <y>471</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>sendEditSpecificQImage(QImage,int,sceneNode*)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>receivedSpecificEditQImage(QImage,int,sceneNode*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>454</x>
+     <y>469</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>456</x>
+     <y>501</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_3</receiver>
+   <slot>gotClickedNumbers()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>930</x>
+     <y>471</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>878</x>
+     <y>468</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_3</sender>
+   <signal>batchAddNumbers(QString)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>receiveNumberBatchAdd(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>851</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>764</x>
+     <y>563</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>printFrame(QString)</signal>
+   <receiver>plainTextEdit</receiver>
+   <slot>appendPlainText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>512</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>91</x>
+     <y>343</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>printWidget(QString)</signal>
+   <receiver>plainTextEdit</receiver>
+   <slot>appendPlainText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>241</x>
+     <y>439</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>336</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>tableWidget</receiver>
+   <slot>play()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>391</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>492</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>setFrameTypeText(QString)</signal>
+   <receiver>label_11</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>177</x>
+     <y>511</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>88</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>getFrameType(int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>689</x>
+     <y>494</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>706</x>
+     <y>494</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_13</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_4</receiver>
+   <slot>gotAnimatedNumberFrames()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>922</x>
+     <y>584</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>831</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_4</sender>
+   <signal>animatedNumberFrames(int)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>setAnimatedFramesNumber(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>835</x>
+     <y>583</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>775</x>
+     <y>603</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>changeSliderRange(int)</signal>
+   <receiver>horizontalSlider_9</receiver>
+   <slot>setTheRange(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>498</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>34</x>
+     <y>473</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_9</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>receiveAnimationSliderPosition(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>59</x>
+     <y>502</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_9</sender>
+   <signal>printSlider(QString)</signal>
+   <receiver>plainTextEdit</receiver>
+   <slot>appendPlainText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>465</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>184</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_9</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>horizontalSlider_9</receiver>
+   <slot>getPosition(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>465</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>sendSetValue(int)</signal>
+   <receiver>horizontalSlider_9</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>493</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>472</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>addOneKeyFrame(QImage,sceneNode*)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>doAddOneKeyFrame(QImage,sceneNode*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>504</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>setFrameText(QString)</signal>
+   <receiver>label_11</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>452</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>tableWidget</receiver>
+   <slot>stop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>189</x>
+     <y>391</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>200</x>
+     <y>492</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>tableWidget</receiver>
+   <slot>pause()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>392</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>148</x>
+     <y>507</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_15</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_5</receiver>
+   <slot>gotSetSpeed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>136</x>
+     <y>373</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>90</x>
+     <y>369</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_5</sender>
+   <signal>userSpeed(int)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>getUserSpeed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>45</x>
+     <y>366</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>10</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_16</sender>
+   <signal>clicked()</signal>
+   <receiver>tableWidget</receiver>
+   <slot>nonlinearPlay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>397</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>592</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>tableWidget</receiver>
+   <slot>fadeIn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>65</x>
+     <y>431</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>81</x>
+     <y>498</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_14</sender>
+   <signal>clicked()</signal>
+   <receiver>tableWidget</receiver>
+   <slot>fadeOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>432</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>502</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
